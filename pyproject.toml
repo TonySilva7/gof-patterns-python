@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "gof"
+version = "0.1.0"
+description = ""
+authors = ["José Antônio Sousa da Silva <tony@arpiatecnologia.com.br>"]
+readme = "README.md"
+packages = [{include = "gof", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+black = "^22.10.0"
+mypy = "^0.991"
+pylint = "^2.15.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
