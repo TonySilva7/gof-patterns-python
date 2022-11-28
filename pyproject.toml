@@ -12,7 +12,6 @@ black = "^22.10.0"
 mypy = "^0.991"
 pylint = "^2.15.6"
 
-
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

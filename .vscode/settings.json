@@ -3,21 +3,25 @@
   "editor.defaultFormatter": "ms-python.python",
   "editor.insertSpaces": true,
   "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.formatOnPaste": false,
   "editor.formatOnType": true,
   "code-runner.executorMap": {
     "python": ".venv/bin/python3",
   },
   // set default formatter to black
   "python.formatting.provider": "black",
+  "python.formatting.blackArgs": [
+    "--line-length",
+    "120",
+    "--target-version",
+    "py310",
+  ],
+  //
   "editor.codeActionsOnSave": {
     "source.fixAll.pylint": true,
     "source.organizeImports": true
   },
-  "python.formatting.blackArgs": [
-    "--line-length",
-    "100",
-  ],
   "python.linting.enabled": true,
   "editor.tabSize": 4,
   //

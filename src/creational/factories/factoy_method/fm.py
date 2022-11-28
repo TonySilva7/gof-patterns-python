@@ -46,7 +46,9 @@ class FactoryVehicle(ABC):
 
     @staticmethod
     @abstractmethod
-    def get_vehicle(type_vehicle: TypeVehicle) -> Vehicle:
+    def get_vehicle(
+        type_vehicle: TypeVehicle,
+    ) -> Vehicle:
         pass
 
     def get_passanger(self) -> None:
@@ -56,7 +58,9 @@ class FactoryVehicle(ABC):
 class SouthZone(FactoryVehicle):
     # ------- Factory method -------
     @staticmethod
-    def get_vehicle(type_vehicle: TypeVehicle) -> Vehicle:
+    def get_vehicle(
+        type_vehicle: TypeVehicle,
+    ) -> Vehicle:
         if type_vehicle == "lux":
             return LuxCar()
 
@@ -71,7 +75,9 @@ class SouthZone(FactoryVehicle):
 
 class EastZone(FactoryVehicle):
     @staticmethod
-    def get_vehicle(type_vehicle: TypeVehicle) -> Vehicle:
+    def get_vehicle(
+        type_vehicle: TypeVehicle,
+    ) -> Vehicle:
         if type_vehicle == "lux":
             return LuxCar()
 
