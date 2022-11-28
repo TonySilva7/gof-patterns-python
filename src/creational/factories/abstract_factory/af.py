@@ -43,56 +43,56 @@ class PoupularCar(PopularVehicle):
 class FactoryVehicle(ABC):
     @staticmethod
     @abstractmethod
-    def get_lux_vehicle(type_vehicle: TypeVehicle) -> LuxVehicle:
+    def get_lux_vehicle() -> LuxVehicle:
         pass
 
     @staticmethod
     @abstractmethod
-    def get_popular_vehicle(type_vehicle: TypeVehicle) -> PopularVehicle:
+    def get_popular_vehicle() -> PopularVehicle:
         pass
 
     @staticmethod
     @abstractmethod
-    def get_popular_moto(type_vehicle: TypeVehicle) -> PopularVehicle:
+    def get_popular_moto() -> PopularVehicle:
         pass
 
 
 class SouthZone(FactoryVehicle):
     # ------- Factory method -------
     @staticmethod
-    def get_lux_vehicle(type_vehicle: TypeVehicle) -> LuxVehicle:
+    def get_lux_vehicle() -> LuxVehicle:
         return LuxCar()
 
     @staticmethod
-    def get_popular_vehicle(type_vehicle: TypeVehicle) -> PopularVehicle:
+    def get_popular_vehicle() -> PopularVehicle:
         return PoupularCar()
 
     @staticmethod
-    def get_popular_moto(type_vehicle: TypeVehicle) -> PopularVehicle:
+    def get_popular_moto() -> PopularVehicle:
         return Motocicle()
 
 
 class EastZone(FactoryVehicle):
     @staticmethod
-    def get_lux_vehicle(type_vehicle: TypeVehicle) -> LuxVehicle:
+    def get_lux_vehicle() -> LuxVehicle:
         return LuxCar()
 
     @staticmethod
-    def get_popular_vehicle(type_vehicle: TypeVehicle) -> PopularVehicle:
+    def get_popular_vehicle() -> PopularVehicle:
         return PoupularCar()
 
     @staticmethod
-    def get_popular_moto(type_vehicle: TypeVehicle) -> PopularVehicle:
+    def get_popular_moto() -> PopularVehicle:
         return Motocicle()
 
 
 class Franchise:
     def get_passangers(self):
         for factory in [SouthZone(), EastZone()]:
-            popular_car = factory.get_popular_vehicle("popular")
+            popular_car = factory.get_popular_vehicle()
             popular_car.get_passanger()
 
-            lux_car = factory.get_lux_vehicle("lux")
+            lux_car = factory.get_lux_vehicle()
             lux_car.get_passanger()
 
 
